@@ -23,6 +23,7 @@ body {
     margin: 0;
     font-family: $default-font;
     line-height: 1.5;
+    font-size: 12px;
 }
 
 .header {
@@ -39,7 +40,7 @@ body {
     padding-top: 60px;
     padding-right: $spacer-side;
     padding-left: calc($spacer-side - 75px / 2);
-    padding-bottom: 160px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -56,8 +57,6 @@ body {
         font-weight: 200;
         margin: 0;
         font-size: 25px;
-        align-self: end;
-        justify-self: end;
         text-align: right;
         position: relative;
 
@@ -71,9 +70,17 @@ body {
             background: rgb(237,17,138);
             bottom: -8px;
             
-
         }
-
+    }
+    &__text {
+        align-self: end;
+    }
+    &__content {
+        font-weight: 200;
+        margin: 0;
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: right;
     }
 }
 
@@ -83,23 +90,26 @@ body {
 
         &__logo {
             max-height: 125px;
+        }
 
         &__title {
-            font-size: 30px;
+            font-size: 35px;
 
     
             &::after {
             left: calc(100% - 80px);
             height: 1px;
             width: 80px;
-
-    
             }
-    
         }
+
+        &__content {
+            font-size: 20px;
         }
     }
 }
+
+
 
 .menu {
     font-size: 11px;
@@ -115,13 +125,13 @@ body {
     
 
     &__item {
-        padding: 10px 3px;
+        padding: 10px 4px;
         list-style: none;
       
         & a {
             text-decoration: none;
             color: white;
-            padding: 10px 3px;
+            padding: 10px 4px;
     
             &:active {
                 background-color: rgb(237,17,138);
@@ -133,20 +143,20 @@ body {
    
 @media screen and (min-width: 500px) {
     .menu {
-        font-size: 12px;
+        font-size: 14px;
         
         &__list {
             padding: 0 $spacer-side;  
             }
     
         &__item {
-            padding: 10px;
+            padding: 7.5px;
             list-style: none;
           
             & a {
                 text-decoration: none;
                 color: white;
-                padding: 10px;
+                padding: 7.5px;
         
                 &:hover {
                     background-color: rgb(237,17,138);
@@ -156,7 +166,19 @@ body {
     }
 }
 
-    
+@media screen and (min-width: 800px) {
+    .menu {
+        font-size: 18px;
+
+        &__item {
+            padding: 10px 15px;
+          
+            & a {
+                padding: 10px 15px;
+            }
+        }
+    }
+} 
 
 
 .footer {
@@ -188,7 +210,7 @@ body {
         padding-bottom: 50px;
         font-size: 10px;
     
-}
+    }
 }
 
 @media screen and (min-width: 500px) {
@@ -203,3 +225,64 @@ body {
         }
     }
 }
+
+.contact {
+    padding: 30px $spacer-side;
+    background-color: rgb(243,243,243);
+    
+    &__title {
+        margin: 0;
+        text-align: center;
+    }
+
+    &__first {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__opening {
+        flex-basis: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &-heading {
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+     
+
+        &-day {
+            padding-right: 15px;
+         }
+    }
+
+    
+
+
+
+    &__location {
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &-heading {
+            margin-top: 0;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        }
+       
+    }
+
+
+
+// &__first {
+//     // display: grid;
+//     // grid-template-columns: 5% auto 5% auto 5%;
+//     // grid-template-rows: auto;
+    
+// }

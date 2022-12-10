@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
+  font-size: 12px;
 }
 
 .header {
@@ -22,7 +23,7 @@ body {
   padding-top: 60px;
   padding-right: 10%;
   padding-left: calc(10% - 37.5px);
-  padding-bottom: 160px;
+  padding-bottom: 120px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -37,8 +38,6 @@ body {
   font-weight: 200;
   margin: 0;
   font-size: 25px;
-  align-self: end;
-  justify-self: end;
   text-align: right;
   position: relative;
 }
@@ -52,6 +51,16 @@ body {
   background: rgb(237, 17, 138);
   bottom: -8px;
 }
+.header__text {
+  align-self: end;
+}
+.header__content {
+  font-weight: 200;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: right;
+}
 
 @media screen and (min-width: 500px) {
   .header {
@@ -60,13 +69,16 @@ body {
   .header__logo {
     max-height: 125px;
   }
-  .header__logo__title {
-    font-size: 30px;
+  .header__title {
+    font-size: 35px;
   }
-  .header__logo__title::after {
+  .header__title::after {
     left: calc(100% - 80px);
     height: 1px;
     width: 80px;
+  }
+  .header__content {
+    font-size: 20px;
   }
 }
 .menu {
@@ -81,13 +93,13 @@ body {
   background-color: #141514;
 }
 .menu__item {
-  padding: 10px 3px;
+  padding: 10px 4px;
   list-style: none;
 }
 .menu__item a {
   text-decoration: none;
   color: white;
-  padding: 10px 3px;
+  padding: 10px 4px;
 }
 .menu__item a:active {
   background-color: rgb(237, 17, 138);
@@ -95,22 +107,33 @@ body {
 
 @media screen and (min-width: 500px) {
   .menu {
-    font-size: 12px;
+    font-size: 14px;
   }
   .menu__list {
     padding: 0 10%;
   }
   .menu__item {
-    padding: 10px;
+    padding: 7.5px;
     list-style: none;
   }
   .menu__item a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 7.5px;
   }
   .menu__item a:hover {
     background-color: rgb(237, 17, 138);
+  }
+}
+@media screen and (min-width: 800px) {
+  .menu {
+    font-size: 18px;
+  }
+  .menu__item {
+    padding: 10px 15px;
+  }
+  .menu__item a {
+    padding: 10px 15px;
   }
 }
 .footer {
@@ -147,4 +170,41 @@ body {
   .footer__credit {
     font-size: 15px;
   }
+}
+.contact {
+  padding: 30px 10%;
+  background-color: rgb(243, 243, 243);
+}
+.contact__title {
+  margin: 0;
+  text-align: center;
+}
+.contact__first {
+  display: flex;
+  flex-direction: column;
+}
+.contact__opening {
+  flex-basis: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact__opening-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.contact__opening-day {
+  padding-right: 15px;
+}
+.contact__location {
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact__location-heading {
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
