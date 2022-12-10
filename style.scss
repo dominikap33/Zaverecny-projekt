@@ -3,7 +3,7 @@ html { box-sizing: border-box; }
 
 $color-primary: #000000;
 $default-font: 'Montserrat', sans-serif;
-$spacer: 30px;
+$spacer-side: 10%;
 $color-font: rgb(51,51,51);
 // $color-pink: rgb(237,17,138);
 // $color-blue: rgb(46,166,222);
@@ -22,63 +22,184 @@ body {
     padding: 0;
     margin: 0;
     font-family: $default-font;
+    line-height: 1.5;
 }
 
 .header {
-    background-image: linear-gradient(#000000, #636365);
+    background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.8), 
+          rgba(0, 0, 0, 0.8)
+        ),
+        url(/images/background_header2.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
-    padding: 30px;
+    padding-top: 60px;
+    padding-right: $spacer-side;
+    padding-left: calc($spacer-side - 75px / 2);
+    padding-bottom: 160px;
     display: flex;
     justify-content: space-between;
-    height: 100wh;
-    
+    position: relative;
+    height: 100vh;
+
     
     &__logo {
-        min-width: 100px;
-        max-width: 150px;
-        margin: 0;
-     
-        
+        min-height: 60px;
+        max-height: 100px;
+        align-self: start;
+         
     }
     &__title {
         font-weight: 200;
         margin: 0;
-        font-size: 20px;
-        align-self: center;
+        font-size: 25px;
+        align-self: end;
+        justify-self: end;
+        text-align: right;
         position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: calc(100% - 60px);
+            display: inline-block;
+            height: 1px;
+            width: 60px;
+            background: rgb(237,17,138);
+            bottom: -8px;
+            
+
+        }
+
     }
-        
-
-
 }
 
+@media screen and (min-width: 500px) {
+    .header {
+        padding-left: calc($spacer-side - 60px / 2);
+
+        &__logo {
+            max-height: 125px;
+
+        &__title {
+            font-size: 30px;
+
+    
+            &::after {
+            left: calc(100% - 80px);
+            height: 1px;
+            width: 80px;
+
+    
+            }
+    
+        }
+        }
+    }
+}
+
+.menu {
+    font-size: 11px;
+    text-transform: uppercase;
+    
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0 $spacer-side / 2;
+        justify-content: space-between;
+        background-color:#141514;  
+        }
+    
+
+    &__item {
+        padding: 10px 3px;
+        list-style: none;
+      
+        & a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 3px;
+    
+            &:active {
+                background-color: rgb(237,17,138);
+            }
+        }
+    }
+}
+
+   
+@media screen and (min-width: 500px) {
+    .menu {
+        font-size: 12px;
+        
+        &__list {
+            padding: 0 $spacer-side;  
+            }
+    
+        &__item {
+            padding: 10px;
+            list-style: none;
+          
+            & a {
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+        
+                &:hover {
+                    background-color: rgb(237,17,138);
+                }
+            }
+        }
+    }
+}
+
+    
 
 
 .footer {
     font-family: $default-font;
-    background-image: linear-gradient (rgb(243,243,243), #636365);
-    padding: 0 $spacer;
-    color: $color-font;
+    background-image: linear-gradient(rgb(243,243,243), #636365);
+    padding: 0 $spacer-side;
+    color: white;
     font-weight: 200;
+
     &__icon {
-        height: 40px;  
+        height: 35px;  
 
         &--spread + .footer__icon--spread {
-            margin-left: 50px;
+            margin-left: 5%;
         }
     }
     
     &__icons {
         text-align: center;
-        padding-top: $spacer * 2;
-        padding-bottom: $spacer;
-        
+        padding-top: 50px;
+        padding-bottom: 30px;
+        :active {
+            transform: scale(1.1);
+        }
     }
     
     &__credit {
         text-align: center;
-        padding-bottom: $spacer * 2;
+        padding-bottom: 50px;
+        font-size: 10px;
     
 }
+}
+
+@media screen and (min-width: 500px) {
+    .footer {
+        &__icons {
+            :hover {
+                transform: scale(1.1);
+            }
+        }
+        &__credit {
+            font-size: 15px;
+        }
+    }
 }
