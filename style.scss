@@ -1,0 +1,84 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+$color-primary: #000000;
+$default-font: 'Montserrat', sans-serif;
+$spacer: 30px;
+$color-font: rgb(51,51,51);
+// $color-pink: rgb(237,17,138);
+// $color-blue: rgb(46,166,222);
+// $color-violet: rgb(54,49,131);
+// pozadi rgb(243,243,243)
+// pozadí 2 rgb(238,238,238)
+// pismo rgb(51,51,51)
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Pompiere', cursive;
+// zluta #ffc72c
+// šeda #636365
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $default-font;
+}
+
+.header {
+    background-image: linear-gradient(#000000, #636365);
+    background-repeat: no-repeat;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 100wh;
+    
+    
+    &__logo {
+        min-width: 100px;
+        max-width: 150px;
+        margin: 0;
+     
+        
+    }
+    &__title {
+        font-weight: 200;
+        margin: 0;
+        font-size: 20px;
+        align-self: center;
+        position: relative;
+    }
+        
+
+
+}
+
+
+
+.footer {
+    font-family: $default-font;
+    background-image: linear-gradient (rgb(243,243,243), #636365);
+    padding: 0 $spacer;
+    color: $color-font;
+    font-weight: 200;
+    &__icon {
+        height: 40px;  
+
+        &--spread + .footer__icon--spread {
+            margin-left: 50px;
+        }
+    }
+    
+    &__icons {
+        text-align: center;
+        padding-top: $spacer * 2;
+        padding-bottom: $spacer;
+        
+    }
+    
+    &__credit {
+        text-align: center;
+        padding-bottom: $spacer * 2;
+    
+}
+}
