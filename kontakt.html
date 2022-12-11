@@ -1,80 +1,106 @@
 ---
 layout: main-layout.njk
 title: Kontakt
-header: Koukám na kontakty
+header: Kontakty
 ---
 
 <section class="contact">
 
-<h1 class="contact__title" >Chcete přijít? Tak přijďte!</h1>
+    <div class="contact--background2">
+        <h1 class="contact__title" >Chcete přijít? Tak přijďte!</h1>
 
-<div class="contact__first">
-    <div class="contact__opening">
-        <h2 class="contact__opening-heading">Otevřeno je</h2>
-        <table class="contact__opening-table">
-            <tr>
-                <td class="contact__opening-day">Po - Čt:</td>
-                <td class="contact__opening-hours">8:00 - 1:00</td>
-            </tr>
-            <tr>
-                <td class="contact__opening-day">Pá - So:</td>
-                <td class="contact__opening-hours">8:00 - 2:00</td>
-            </tr>
-            <tr>
-                <td class="contact__opening-day">Ne:</td>
-                <td class="contact__opening-hours">9:00 - 1:00</td>
-            </tr>
-        </table>
+        <div class="contact__first">
+            <div class="contact__opening">
+                <h2 class="contact__opening-heading">Otevřeno je</h2>
+                <table class="contact__opening-table">
+                    <tr>
+                        <td class="contact__opening-day">Po - Čt:</td>
+                        <td class="contact__opening-hours">8:00 - 1:00</td>
+                    </tr>
+                    <tr>
+                        <td class="contact__opening-day">Pá - So:</td>
+                        <td class="contact__opening-hours">8:00 - 2:00</td>
+                    </tr>
+                    <tr>
+                        <td class="contact__opening-day">Ne:</td>
+                        <td class="contact__opening-hours">9:00 - 1:00</td>
+                    </tr>
+                </table>
+                    
+                
+
+            </div>
+
+            <div class="contact__location">
+                <h2 class="contact__location-heading">Tady</h2>
+                <p class="contact__location-text">Korunní 28, Praha 2</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contact__reservation">
+        <h2 class="contact__location-heading">Rezervace</h2>
+        <form class="contact__form" method="post" action="#">
+            <label class="contact__item-label">Kdo přijde?
+                <input class="contact__form-item" type="text" name="jmeno" id="jmeno" required>
+            </label>
+
+            <label class="contact__item-label">Kolik vás bude?
+                <input class="contact__form-item" type="number" name="pocet" id="pocet" required>
+            </label>
+
+            <label class="contact__item-label">Kdy přijdete?
+                <input class="contact__form-item" type="date" name="datum" id="datum" required>
+                <div class="contact__form-item">
+                    <select class="contact__form-item--font" name="hodiny" id="hodiny" required>
+                        <option>Hodiny</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                    </select>
+                    <select class="contact__form-item--font" name="minuty" id="minuty" required>
+                        <option>Minuty</option>
+                        <option>00</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                    </select>
+                </div>
+            </label>
+        
+            <label class="contact__item-label">E-mail
+                <input class="contact__form-item" type="email" name="email" id="email" required>
+            </label>
             
+            <label class="contact__item-label">Telefon
+                <input class="contact__form-item" type="tel" name="telefon" id="telefon" required>
+            </label>
         
+            <label class="contact__item-label">Poznámka
+                <textarea class="contact__form-item" rows="4" cols="20" name="poznamka">
+                </textarea>
+            </label>
 
+            <input class="contact__checkbox" type="checkbox" name="udaje" id="udaje" required>
+            <label class="contact__check-label" for="udaje">Zaškrtnutím souhlasíte se zpracováním osobních údajů.</label>
+
+            <button class="contact__button" type="submit"><a href="/formular-odeslan/"></a>Odeslat</button>
+
+        </form>
     </div>
 
-    <div class="contact__location">
-        <h2 class="contact__location-heading">Tady</h2>
-        <p class="contact__location-text">Korunní 28, Praha 2</p>
 
-    </div>
-</div>
-
-<div class="contact__second">
-    <form method="post" action="#">
-        <label>Kdo přijde?
-            <input type="text" name="jmeno" id="jmeno" placeholder="Jméno a příjmení" required>
-        </label>
-
-        <label>Kolik vás prijde?
-            <input type="number" name="pocet" id="pocet" required>
-        </label>
-
-        <label>Kdy přijete?
-            <input type="datetime" name="datum" id="datum" required>
-        </label>
-
-        <label>A na jak dlouho?
-            <input type="number" name="hodiny" id="hodiny" required>
-        </label>
-    
-        <label>E-mail
-            <input type="email" name="email" id="email" required>
-        </label>
-        
-        <label>Telefon
-            <input type="tel" name="telefon" id="telefon" required>
-        </label>
-    
-    </form>
-
-        <p>Poznámka</p>
-            <textarea rows="4" cols="20" name="poznamka">
-            </textarea>
-
-       
-        <input type="checkbox" name="udaje" id="udaje" required>
-        <label for="udaje">Zaškrtnutím tlačítka souhlasíte se zpracováním osobních údajů.</label>
-
-        <button type="submit">Odeslat</button>
-
-</div>
 
 </section>

@@ -5,6 +5,9 @@ $color-primary: #000000;
 $default-font: 'Montserrat', sans-serif;
 $spacer-side: 10%;
 $color-font: rgb(51,51,51);
+$mobil-font-size: 12px;
+$color-background1: rgb(243,243,243);
+$color-background2: rgb(238,238,238);
 // $color-pink: rgb(237,17,138);
 // $color-blue: rgb(46,166,222);
 // $color-violet: rgb(54,49,131);
@@ -23,7 +26,7 @@ body {
     margin: 0;
     font-family: $default-font;
     line-height: 1.5;
-    font-size: 12px;
+    font-size: $mobil-font-size;
 }
 
 .header {
@@ -81,6 +84,7 @@ body {
         margin-top: 20px;
         font-size: 16px;
         text-align: right;
+        color: #D5D7D5;
     }
 }
 
@@ -227,8 +231,13 @@ body {
 }
 
 .contact {
-    padding: 30px $spacer-side;
-    background-color: rgb(243,243,243);
+    
+    background-color: $color-background1;
+
+    &--background2 {
+        background-color: $color-background2;
+        padding: 30px $spacer-side;
+    }
     
     &__title {
         margin: 0;
@@ -265,7 +274,6 @@ body {
 
 
     &__location {
-        padding-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
 
@@ -275,9 +283,107 @@ body {
             text-align: center;
         }
         }
-       
+    
+    &__form {
+        max-width: 100%;
     }
 
+    &__item-label {
+        display: block;
+
+        & + .contact__item-label {
+            margin-top: 10px;
+        }
+    }
+
+    &__reservation {
+        padding: 30px $spacer-side;
+    }
+
+    &__form-item {
+        display: block;
+        font-size: $mobil-font-size;
+        font-family: $default-font;
+        margin-top: 5px;
+        width: 100%;
+
+        &--font {
+            font-size: $mobil-font-size;
+            font-family: $default-font;
+        }
+    }
+    &__checkbox, .contact__check-label {
+    margin-top: 20px;
+    }
+
+    &__button {
+    display: block;
+    margin-top: 25px;
+    background-color: rgb(54,49,131);
+    font-size: $mobil-font-size;
+    font-family: $default-font;
+    font-weight: 400;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 8px;
+    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+ }
+
+ .sentform {
+    padding: 30px $spacer-side / 2;
+    background-color: $color-background1;
+
+    &__grid {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        gap: 5px;
+
+        & img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        // & .sentform__photo3 {
+        //     max-width: 100%;
+        //     height: auto;
+        //     width: auto;
+        //     object-fit: auto;
+        // }
+    }
+
+    &__photo3 {
+        grid-row: 2/4;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        object-fit: auto;
+
+        }
+    
+    &__photo6 {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    &__button {
+        text-decoration: none;
+        color: $color-font;
+        border: 1px solid $color-font;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgba(46, 166, 222, 0.3);
+        font-size: $mobil-font-size;
+    }
+    
+ }
 
 
 // &__first {
