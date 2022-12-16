@@ -6,8 +6,9 @@ header: Kontakty
 
 <section class="contact">
 
-    <div class="contact--background2">
+        <a class="home__icon" href="/"><img src="/images/icons/home.svg" alt="home"></a>
         <h1 class="contact__title" >Chcete přijít? Tak přijďte!</h1>
+        
 
         <div class="contact__first">
             <div class="contact__opening">
@@ -34,14 +35,15 @@ header: Kontakty
             <div class="contact__location">
                 <h2 class="contact__location-heading">Tady</h2>
                 <p class="contact__location-text">Korunní 28, Praha 2</p>
+                <p class="contact__location-text">584 367 843</p>
 
             </div>
         </div>
-    </div>
+    
 
     <div class="contact__reservation">
         <h2 class="contact__location-heading">Rezervace</h2>
-        <form class="contact__form" method="post" onsubmit="(event)=>{event.preventDefault();location.href='/formular-odeslan/';}">
+        <form class="contact__form" method="get" action="/formular-odeslan/">
             <label class="contact__item-label">Kdo přijde?
                 <input class="contact__form-item" type="text" name="jmeno" id="jmeno" required>
             </label>

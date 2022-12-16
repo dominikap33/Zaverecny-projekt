@@ -86,6 +86,8 @@ body {
         text-align: right;
         color: #D5D7D5;
     }
+
+
 }
 
 @media screen and (min-width: 500px) {
@@ -110,6 +112,7 @@ body {
         &__content {
             font-size: 20px;
         }
+
     }
 }
 
@@ -141,6 +144,7 @@ body {
                 background-color: rgb(237,17,138);
             }
         }
+
     }
 }
 
@@ -187,7 +191,7 @@ body {
 
 .footer {
     font-family: $default-font;
-    background-image: linear-gradient(rgb(243,243,243), #636365);
+    background-image: linear-gradient(#ffffff, #636365);
     padding: 0 $spacer-side;
     color: white;
     font-weight: 200;
@@ -212,12 +216,12 @@ body {
     &__credit {
         text-align: center;
         padding-bottom: 50px;
-        font-size: 10px;
+        font-size: $mobil-font-size;
     
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1400px) {
+@media screen and (min-width: 500px) {
     .footer {
         &__icons {
             :hover {
@@ -232,16 +236,17 @@ body {
 
 .contact {
     
-    background-color: $color-background1;
-
-    &--background2 {
-        background-color: $color-background2;
-        padding: 30px $spacer-side;
-    }
+    background-image: url(/images/background/background_site2.jpeg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 30px $spacer-side;
+    position: relative;
+  
     
     &__title {
         margin: 0;
         text-align: center;
+        font-size: 22px;
     }
 
     &__first {
@@ -274,6 +279,11 @@ body {
         &-heading {
             margin-top: 0;
             margin-bottom: 8px;
+            text-align: center;
+        }
+
+        &-text {
+            line-height: 1.2;
             text-align: center;
         }
     }
@@ -331,10 +341,29 @@ body {
     }
  }
 
+ @media screen and (min-width: 500px) {
+    .contact {
+        &__first {
+            flex-direction: row;
+            align-items: center;
+            padding-left: $spacer-side;
+            padding-right: $spacer-side;
+            max-width: 1400px;
+        }
+
+    }
+ }
+
  .sentform {
     padding: 30px calc($spacer-side / 2);
-    background-color: $color-background1;
+    background-image: url(/images/background/background_site.jpeg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-align: center;
 
+    &__heading {
+        font-size: 22px;
+    }
     &__grid {
         padding-top: 50px;
         display: grid;
@@ -357,11 +386,11 @@ body {
     }
     &__button {
         text-decoration: none;
-        color: $color-font;
+        color: white;
         border: 1px solid $color-font;
         padding: 5px 10px;
         border-radius: 5px;
-        background-color: rgba(46, 166, 222, 0.3);
+        background-color: rgba(0, 0, 0, 0.5);
         font-size: $mobil-font-size;
     }
  }
@@ -416,12 +445,16 @@ body {
         background-image: url(/images/background/background_site.jpeg);
         background-repeat: no-repeat;
         background-position: top left;
+        position: relative;
+        text-align: justify;
     }
 
 .gin {
     padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
+    
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
     &__images {
         display: grid;
@@ -434,6 +467,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
     }
     &__image2 {
@@ -445,8 +479,10 @@ body {
 
 .tonic {
     padding: 15px calc($spacer-side / 2);
+    
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
 
     &__images {
@@ -458,6 +494,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
             
         }
     }
@@ -473,6 +510,7 @@ body {
     padding: 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
 
     &__images {
@@ -484,6 +522,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
             
         }
     }
@@ -493,6 +532,7 @@ body {
     padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
 
     &__images {
@@ -504,21 +544,97 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
             
         }
     }  
+}
+
+@media screen and (min-width: 500px) {
+    .gin {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+            order: -1;
+        }
+    }
+
+    .tonic {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+            
+        }
+    }
+
+    .other {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+           
+        }
+    }
+
+    .tapas {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+            order: -1;
+        }
+    }
+
 }
 
 .site__kafe {
     background-image: url(/images/background/background_site2.jpeg);
     background-repeat: no-repeat;
     background-position: top left;
+    position: relative;
+    text-align: justify;
 }
 
 .kafe {
     padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
     &__images {
         display: grid;
@@ -531,6 +647,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
     }
 
@@ -542,16 +659,17 @@ body {
     &__image5 {
         grid-column: 2 / 4;
         grid-row: 2;
-    }
+    }  
+}   
 
 
     
-}   
 
 .brunch {
     padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
     &__images {
         display: grid;
@@ -564,6 +682,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
     }
 }
@@ -572,6 +691,7 @@ body {
     padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
     &__images {
         display: grid;
@@ -584,6 +704,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
     }
     &__image4 {
@@ -595,6 +716,7 @@ body {
     padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+        font-size: 22px;
     }
     &__images {
         display: grid;
@@ -607,15 +729,94 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
     }
 }
 
+@media screen and (min-width: 500px) {
+    .kafe {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+        }
+    }
+
+    .brunch {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+            order: -1;
+        }
+    }
+
+    .desserts {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+            order: -1;
+        }
+    }
+
+    .bistro {
+        display: flex;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        gap: 35px;
+        padding: 40px $spacer-side 30px $spacer-side;
+        &__text {
+            flex: 0 1 50%;
+        }
+        &__images {
+            flex: 0 1 50%;
+        }
+    }
+
+}
+
 .home {
+    background-image: url(/images/background/background_site.jpeg);
+    background-repeat: no-repeat;
+    background-position: top left;
+
+
 
     &__header {
         text-align: center;
         padding-top: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 22px;
 
     }
 
@@ -640,22 +841,27 @@ body {
     }
 
     &__grid {
-    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
+        padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
 
     }
 
     &__picture {
-    background-image: url(/images/background/background_header.jpg);
-    background-attachment: fixed;
-    height: 100px;
+        background-image: url(/images/background/background_header.jpg);
+        background-attachment: fixed;
+        height: 400px;
+        background-repeat: no-repeat;
+        }
 
-    & + .home__picture {
-        margin-top: 0px;
+    &__picture2 {
+        background-image: url(/images/gin/gin-tasting.avif);
+        background-attachment: fixed;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
- 
-
-    }
+    
 
     &__uvod {
         text-align:justify;
@@ -664,12 +870,25 @@ body {
 
     &__eventy {
         text-align: justify;
-        padding-top: 10px;
+        padding-top: 20px;
+
+        &-header {
+            margin-top: 0;
+        }
     }
 
     &__tasting {
         text-align: justify;
         padding-top: 10px;
+        padding-bottom: 20px;
+
+        &-header {
+            margin-top: 0;
+        }
+
+        &-text {
+            margin-bottom: 0;
+        }
     }
 
 
@@ -725,11 +944,43 @@ body {
             grid-column: 2;
             padding-left: 30px;
             text-align: justify;
+
+           
         }
     
     
         
     }
+}
+
+.home__icon {
+   
+    & img {
+        height: 20px;
+        position: absolute;
+        right: 5%;
+        top: 15px;
+        &:active {
+            transform: scale(1.2);
+        }
+    
+    }
+
+}
+
+@media screen and (min-width: 500px) {
+    .home__icon img {
+        right: 10%;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}  
+
+@media screen and (min-width: 1400px) {
+    .home__icon img {
+        right: 130px;
+}
 }
 
 
