@@ -41,7 +41,7 @@ header: Kontakty
 
     <div class="contact__reservation">
         <h2 class="contact__location-heading">Rezervace</h2>
-        <form class="contact__form" method="post" action="/formular-odeslan/">
+        <form class="contact__form" method="post" onsubmit="(event)=>{event.preventDefault();location.href='/formular-odeslan/';}">
             <label class="contact__item-label">Kdo přijde?
                 <input class="contact__form-item" type="text" name="jmeno" id="jmeno" required>
             </label>
@@ -96,7 +96,7 @@ header: Kontakty
             <input class="contact__checkbox" type="checkbox" name="udaje" id="udaje" required>
             <label class="contact__check-label" for="udaje">Zaškrtnutím souhlasíte se zpracováním osobních údajů.</label>
 
-            <button class="contact__button" type="submit"><a href="/formular-odeslan/"></a>Odeslat</button>
+            <button class="contact__button" type="submit">Odeslat</button>
 
         </form>
     </div>

@@ -8,7 +8,7 @@ $color-font: rgb(51,51,51);
 $mobil-font-size: 12px;
 $color-background1: rgb(243,243,243);
 $color-background2: rgb(238,238,238);
-// $color-pink: rgb(237,17,138);
+$color-pink: rgb(237,17,138);
 // $color-blue: rgb(46,166,222);
 // $color-violet: rgb(54,49,131);
 // pozadi rgb(243,243,243)
@@ -35,7 +35,7 @@ body {
           rgba(0, 0, 0, 0.8), 
           rgba(0, 0, 0, 0.8)
         ),
-        url(/images/background_header2.jpg);
+        url(/images/background/background_header2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -122,7 +122,7 @@ body {
     &__list {
         display: flex;
         margin: 0;
-        padding: 0 $spacer-side / 2;
+        padding: 0 calc($spacer-side / 2);
         justify-content: space-between;
         background-color:#141514;  
         }
@@ -217,7 +217,7 @@ body {
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (max-width: 1400px) {
     .footer {
         &__icons {
             :hover {
@@ -279,7 +279,10 @@ body {
     }
     
     &__form {
-        max-width: 100%;
+        width: 100%;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__item-label {
@@ -300,6 +303,7 @@ body {
         font-family: $default-font;
         margin-top: 5px;
         width: 100%;
+       
 
         &--font {
             font-size: $mobil-font-size;
@@ -328,7 +332,7 @@ body {
  }
 
  .sentform {
-    padding: 30px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2);
     background-color: $color-background1;
 
     &__grid {
@@ -415,7 +419,7 @@ body {
     }
 
 .gin {
-    padding: 30px $spacer-side / 2 15px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
     }
@@ -440,7 +444,7 @@ body {
 }
 
 .tonic {
-    padding: 15px $spacer-side / 2;
+    padding: 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
     }
@@ -466,7 +470,7 @@ body {
 }
 
 .other {
-    padding: 15px $spacer-side / 2;
+    padding: 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
     }
@@ -486,7 +490,7 @@ body {
 }
 
 .tapas {
-    padding: 15px $spacer-side / 2 30px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
     }
@@ -512,7 +516,7 @@ body {
 }
 
 .kafe {
-    padding: 30px $spacer-side / 2 15px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
     }
@@ -530,7 +534,7 @@ body {
         }
     }
 
-    &__image4 {
+    &__image3 {
         grid-column: 1;
         grid-row: 2 / 4;
     }
@@ -545,25 +549,189 @@ body {
 }   
 
 .brunch {
-    padding: 30px $spacer-side / 2 15px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+    }
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px;
+        gap: 5px;
+        padding-top: 10px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
 .desserts {
-    padding: 30px $spacer-side / 2 15px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
+    }
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px 150px;
+        gap: 5px;
+        padding-top: 10px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__image4 {
+        grid-column: 1 / 3;
     }
 }
 
 .bistro {
-    padding: 30px $spacer-side / 2 15px $spacer-side / 2;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
     &__header {
         margin-top: 0;
     }
+    &__images {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 200px);
+        gap: 5px;
+        padding-top: 10px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
+
+.home {
+
+    &__header {
+        text-align: center;
+        padding-top: 30px;
+
+    }
+
+    &__uvod-header {
+        margin-top: 0;
+    }
+
+    &__times {
+        text-align: center;
+        border: 1px solid $color-pink;
+        max-width: fit-content;
+        padding: 10px;
+        margin: 0 auto 20px auto;
+        border-radius: 10px;
+        
+        
+        &--bold {
+            font-weight: bold;
+            margin: 2px;
+
+        }
+    }
+
+    &__grid {
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
+
+    }
+
+    &__picture {
+    background-image: url(/images/background/background_header.jpg);
+    background-attachment: fixed;
+    height: 100px;
+
+    & + .home__picture {
+        margin-top: 0px;
+    }
+
+ 
+
+    }
+
+    &__uvod {
+        text-align:justify;
+ 
+    }
+
+    &__eventy {
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+    &__tasting {
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+
+    
+}
+
+@media screen and (min-width: 500px) {
+    .home {
+
+        &__header {
+            text-align: center;
+            padding-top: 30px;
+    
+        }
+    
+        &__uvod-header {
+            margin-top: 0;
+        }
+    
+        &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
+    
+        }
+    
+        &__picture {
+        background-image: url(/images/background/background_header.jpg);
+        background-attachment: fixed;
+        grid-row: 2 / -1;
+        grid-column: 1;
+    
+    
+        }
+    
+        &__uvod {
+            grid-row: 1;
+            grid-column: 1;
+            text-align:justify;
+            padding-bottom: 30px;
+        }
+    
+        &__eventy {
+            grid-row: 2;
+            grid-column: 2;
+            padding-left: 30px;
+            text-align: justify;
+        }
+    
+        &__tasting {
+            grid-row: 3;
+            grid-column: 2;
+            padding-left: 30px;
+            text-align: justify;
+        }
+    
+    
+        
+    }
+}
+
 
 
 // &__first {
