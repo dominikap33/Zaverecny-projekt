@@ -399,6 +399,7 @@ body {
  @media screen and (min-width: 500px) {
     .sentform {
         padding: 30px $spacer-side;
+        font-size: 13px;
     
         &__grid {
             grid-template-columns: repeat(3, 1fr);
@@ -852,14 +853,14 @@ body {
 
     &__picture {
         background-image: url(/images/background/background_header.jpg);
-        background-attachment: fixed;
+        // background-attachment: fixed;
         height: 400px;
         background-repeat: no-repeat;
         }
 
     &__picture2 {
         background-image: url(/images/gin/gin-tasting.avif);
-        background-attachment: fixed;
+        // background-attachment: fixed;
         height: 400px;
         background-repeat: no-repeat;
         background-position: center;
