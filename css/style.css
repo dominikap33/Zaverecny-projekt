@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
 }
@@ -6,6 +7,7 @@ html {
   box-sizing: inherit;
 }
 
+/* chtěla jsem ještě rozdělit na menší části, aby bylo přehlednější, mám v plánu dodělat*/
 body {
   padding: 0;
   margin: 0;
@@ -621,6 +623,9 @@ body {
 }
 
 @media screen and (min-width: 500px) {
+  body {
+    font-size: 13px;
+  }
   .kafe {
     display: flex;
     max-width: 1400px;
@@ -753,42 +758,47 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-  .home__header {
-    text-align: center;
-    padding-top: 30px;
-  }
-  .home__uvod-header {
-    margin-top: 0;
-  }
   .home__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    padding: 30px 5% 15px 5%;
+    padding: 30px 10% 15px 10%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .home__picture {
     background-image: url(/images/background/background_header.jpg);
     background-attachment: fixed;
-    grid-row: 2/-1;
+    grid-row: 1/-1;
     grid-column: 1;
+    height: auto;
   }
   .home__uvod {
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 2;
     text-align: justify;
-    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
   }
   .home__eventy {
     grid-row: 2;
     grid-column: 2;
-    padding-left: 30px;
     text-align: justify;
+    padding-left: 20px;
   }
   .home__tasting {
     grid-row: 3;
     grid-column: 2;
-    padding-left: 30px;
     text-align: justify;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  .home__picture2 {
+    display: none;
+  }
+  .home__times {
+    margin-top: 30px;
   }
 }
 .home__icon img {
@@ -812,5 +822,50 @@ body {
 @media screen and (min-width: 1400px) {
   .home__icon img {
     right: 130px;
+  }
+}
+.listek {
+  background-image: url(/images/background/background_site.jpeg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 30px 5% 15px 5%;
+  position: relative;
+}
+.listek__gin, .listek__tonic, .listek__other, .listek__non-alcoholic, .listek__kafe, .listek__caj, .listek__cold, .listek__alcoholic, .listek__breakfast {
+  width: 100%;
+}
+.listek__price {
+  text-align: right;
+}
+.listek__bar {
+  border: 1px solid rgb(237, 17, 138);
+  padding: 0 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.listek__title {
+  margin-top: 0;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.listek__kavarna {
+  border: 1px solid rgb(54, 49, 131);
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 850px) {
+  .listek__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .listek__bar {
+    flex: 0 1 50%;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  .listek__kavarna {
+    flex: 0 1 50%;
   }
 }/*# sourceMappingURL=style.css.map */

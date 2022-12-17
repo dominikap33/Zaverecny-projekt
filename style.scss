@@ -1,16 +1,16 @@
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
-$color-primary: #000000;
+// $color-primary: #000000;
 $default-font: 'Montserrat', sans-serif;
 $spacer-side: 10%;
 $color-font: rgb(51,51,51);
 $mobil-font-size: 12px;
-$color-background1: rgb(243,243,243);
-$color-background2: rgb(238,238,238);
+// $color-background1: rgb(243,243,243);
+// $color-background2: rgb(238,238,238);
 $color-pink: rgb(237,17,138);
 // $color-blue: rgb(46,166,222);
-// $color-violet: rgb(54,49,131);
+$color-violet: rgb(54,49,131);
 // pozadi rgb(243,243,243)
 // pozadí 2 rgb(238,238,238)
 // pismo rgb(51,51,51)
@@ -19,6 +19,7 @@ $color-pink: rgb(237,17,138);
 // zluta #ffc72c
 // šeda #636365
 
+/* chtěla jsem ještě rozdělit na menší části, aby bylo přehlednější, mám v plánu dodělat*/
 
 
 body {
@@ -327,7 +328,7 @@ body {
     &__button {
     display: block;
     margin-top: 25px;
-    background-color: rgb(54,49,131);
+    background-color: $color-violet;
     font-size: $mobil-font-size;
     font-family: $default-font;
     font-weight: 400;
@@ -735,6 +736,10 @@ body {
 }
 
 @media screen and (min-width: 500px) {
+    body {
+        font-size: 13px;
+    }
+    
     .kafe {
         display: flex;
         max-width: 1400px;
@@ -898,54 +903,58 @@ body {
 @media screen and (min-width: 500px) {
     .home {
 
-        &__header {
-            text-align: center;
-            padding-top: 30px;
-    
-        }
-    
-        &__uvod-header {
-            margin-top: 0;
-        }
     
         &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
-        padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
+        padding: 30px $spacer-side 15px $spacer-side;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
     
         }
     
         &__picture {
         background-image: url(/images/background/background_header.jpg);
         background-attachment: fixed;
-        grid-row: 2 / -1;
+        grid-row: 1 / -1;
         grid-column: 1;
+        height: auto;
     
     
         }
     
         &__uvod {
             grid-row: 1;
-            grid-column: 1;
+            grid-column: 2;
             text-align:justify;
-            padding-bottom: 30px;
+            padding-left: 20px;
+            padding-top: 10px;
         }
     
         &__eventy {
             grid-row: 2;
             grid-column: 2;
-            padding-left: 30px;
             text-align: justify;
+            padding-left: 20px;
         }
     
         &__tasting {
             grid-row: 3;
             grid-column: 2;
-            padding-left: 30px;
             text-align: justify;
-
+            padding-left: 20px;
+            padding-bottom: 10px;
            
+        }
+
+        &__picture2 {
+            display: none;
+        }
+
+        &__times {
+            margin-top: 30px;
         }
     
     
@@ -982,6 +991,69 @@ body {
         right: 130px;
 }
 }
+
+.listek {
+    background-image: url(/images/background/background_site.jpeg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 30px calc($spacer-side / 2) 15px calc($spacer-side / 2);
+    position: relative;
+
+    &__gin, &__tonic, &__other, &__non-alcoholic, &__kafe, &__caj, &__cold, &__alcoholic, &__breakfast {
+        width: 100%;
+    }
+
+    &__price {
+        text-align: right;
+    }
+
+    &__bar {
+        border: 1px solid $color-pink;
+        padding: 0 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    &__title {
+        margin-top: 0;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    &__kavarna {
+        border: 1px solid $color-violet;
+        padding: 0 20px;
+        border-radius: 10px;
+        
+    }
+}
+
+@media screen and (min-width:850px) {
+    .listek {
+        &__flex {
+            display: flex;
+            
+            justify-content: space-between;
+        }
+        &__bar {
+            flex: 0 1 50%;
+            margin-top: 0;
+            margin-left: 30px;
+        }
+        &__kavarna {
+            flex: 0 1 50%;
+            
+        }
+    }
+}
+
+
+    
+
+
+
+
+
+
 
 
 
