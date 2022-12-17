@@ -856,16 +856,9 @@ body {
         // background-attachment: fixed;
         height: 400px;
         background-repeat: no-repeat;
+        background-position: center;
         }
 
-    &__picture2 {
-        background-image: url(/images/gin/gin-tasting.avif);
-        // background-attachment: fixed;
-        height: 400px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
 
     
 
@@ -917,11 +910,11 @@ body {
         }
     
         &__picture {
-        background-image: url(/images/background/background_header.jpg);
         background-attachment: fixed;
         grid-row: 1 / -1;
         grid-column: 1;
         height: auto;
+        background-position: top left;
     
     
         }
@@ -950,9 +943,6 @@ body {
            
         }
 
-        &__picture2 {
-            display: none;
-        }
 
         &__times {
             margin-top: 30px;

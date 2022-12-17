@@ -726,13 +726,7 @@ body {
   background-image: url(/images/background/background_header.jpg);
   height: 400px;
   background-repeat: no-repeat;
-}
-.home__picture2 {
-  background-image: url(/images/gin/gin-tasting.avif);
-  height: 400px;
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 .home__uvod {
   text-align: justify;
@@ -767,11 +761,11 @@ body {
     margin-right: auto;
   }
   .home__picture {
-    background-image: url(/images/background/background_header.jpg);
     background-attachment: fixed;
     grid-row: 1/-1;
     grid-column: 1;
     height: auto;
+    background-position: top left;
   }
   .home__uvod {
     grid-row: 1;
@@ -792,9 +786,6 @@ body {
     text-align: justify;
     padding-left: 20px;
     padding-bottom: 10px;
-  }
-  .home__picture2 {
-    display: none;
   }
   .home__times {
     margin-top: 30px;
